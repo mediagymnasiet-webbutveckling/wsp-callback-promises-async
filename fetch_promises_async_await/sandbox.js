@@ -23,13 +23,20 @@ async function getDadJokes() {
     },
     });
     let data = await response.json();
-    console.log(data);
+    return data;
 
 }
 
+console.log(1);
+console.log(2);
+console.log(3);
 
 getDadJokes().then(function(data) {
-    console.log('resolved:', data);
+    console.log(data);
 }).catch(function(err) {
     console.log(err);
 });
+
+console.log(4);
+console.log(5);
+console.log(6);

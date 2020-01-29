@@ -1,9 +1,8 @@
 
  let momIsHappy = false;
 
- function tryPromise (momIsHappy) { 
-	return new Promise((resolve, reject) => {
-
+ function tryPromise(momIsHappy) { 
+	return new Promise(function(resolve, reject) {
         if(momIsHappy) {
             resolve('Lego köpt!');
         } else {
@@ -12,9 +11,9 @@
     });
  }
 
- tryPromise(momIsHappy).then((data)=>{ 
+ tryPromise(momIsHappy).then(function(data) { 
     console.log(data); // “Promise resolved!”
  }).catch(function(err) {
     console.log(err);
  });
-//
+
